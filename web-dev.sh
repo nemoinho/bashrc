@@ -1,0 +1,6 @@
+alias is_web_dev_tty="WEB_DEV_TTY=''; if [ -t 1 ]; then WEB_DEV_TTY='-it'; fi"
+alias yarn="is_web_dev_tty; docker run --rm $WEB_DEV_TTY -v \$PWD:/app -w /app \$PARAM_MAP -u \$(id -u):\$(id -g) node:7 yarn"
+alias node="is_web_dev_tty; docker run --rm $WEB_DEV_TTY -v \$PWD:/app -w /app \$PARAM_MAP -u \$(id -u):\$(id -g) node:7 node"
+alias npm="is_web_dev_tty; docker run --rm $WEB_DEV_TTY -v \$PWD:/app -w /app \$PARAM_MAP -u \$(id -u):\$(id -g) node:7 npm"
+alias composer="is_web_dev_tty; docker run --rm $WEB_DEV_TTY -v \$PWD:/app -w /app \$PARAM_MAP -u \$(id -u):\$(id -g) composer composer"
+alias php="is_web_dev_tty; docker run --rm $WEB_DEV_TTY -v \$PWD:/app -w /app \$PARAM_MAP -u \$(id -u):\$(id -g) php php"
