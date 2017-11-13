@@ -1,5 +1,5 @@
 alias lg='git lg'
-alias co='git coheckout'
+alias co='git checkout'
 alias push='git push'
 alias commit='git commit'
 alias st='git status'
