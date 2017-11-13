@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for ALIAS_FILE in ~/.alias/*
+do
+	source $ALIAS_FILE
+done
