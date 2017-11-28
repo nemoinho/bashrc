@@ -1,0 +1,2 @@
+alias mintern="xrandr | grep ' connected' | cut -d' ' -f1-3 | sed 's/\\(^[A-Z0-9]\\{1,\\}\\).*primary/--output \\1 --auto/;s/\\(^[A-Z0-9]\\{1,\\}\\).*/--output \\1 --off/' | xargs xrandr && xbacklight -set 100"
+alias mextern="xrandr | grep ' connected' | cut -d' ' -f1-3 | sed 's/\\(^[A-Z0-9]\\{1,\\}\\).*primary/--output \\1 --off/;s/\\(^[A-Z0-9]\\{1,\\}\\).*/--output \\1 --auto/' | tr '\\n' ' ' | sed 's/\\([A-Z0-9]\\{1,\\}\\) --auto --output [A-Z0-9]\\{1,\\}/\\0 --right-of \\1/' | xargs xrandr && xbacklight -set 100"
