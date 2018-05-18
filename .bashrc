@@ -1,7 +1,4 @@
-if [ -d /etc/skel/.bashrc ]
-then
-	source /etc/skel/.bashrc
-fi
+[ -f /etc/skel/.bashrc ] && source /etc/skel/.bashrc
 
 source ~/.bash-alias
 source ~/.bash-prompt-for-git.sh
